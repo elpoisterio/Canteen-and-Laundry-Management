@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <com.gc.materialdesign.views.ButtonRectangle
+        android:layout_width="128dp"
+        android:layout_height="48dp"
+        android:text="Shopkeeper"
+        android:id="@+id/button_shopkeeper"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:textColor="@color/white"
+        android:background="@color/colorSecondary"
+
+
+        />
+
+    <com.gc.materialdesign.views.ButtonRectangle
+        android:layout_width="128dp"
+        android:layout_height="48dp"
+        android:text="Student"
+        android:id="@+id/button_student"
+        android:textColor="@color/white"
+        android:background="@color/colorSecondary"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/button_shopkeeper"
+        android:layout_alignLeft="@+id/button_shopkeeper"
+        android:layout_alignStart="@+id/button_shopkeeper"
+        android:layout_alignRight="@+id/button_shopkeeper"
+        android:layout_alignEnd="@+id/button_shopkeeper" />
+
+    <com.gc.materialdesign.views.ButtonRectangle
+        android:layout_width="128dp"
+        android:layout_height="48dp"
+        android:text="Faculty"
+        android:id="@+id/button_faculty"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorSecondary"
+        android:layout_below="@+id/button_student"
+        android:layout_alignLeft="@+id/button_student"
+        android:layout_alignStart="@+id/button_student"
+        android:layout_alignRight="@+id/button_shopkeeper"
+        android:layout_alignEnd="@+id/button_shopkeeper" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Sign Up As:"
+        android:id="@+id/sign_up"
+        android:textSize="35sp"
+        android:textColor="@color/black"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/button_shopkeeper"
+        android:layout_alignEnd="@+id/button_shopkeeper"
+        android:layout_marginTop="150dp" />
+</RelativeLayout>

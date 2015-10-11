@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/complaintclass">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+
+    </LinearLayout>
+
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/complaint"
+        android:hint="  Enter your Complain"
+        android:ems="10"
+        android:layout_marginLeft="40dp"
+        android:background="@drawable/rect"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:cursorVisible="false"
+        />
+
+    <com.gc.materialdesign.views.ButtonRectangle
+        android:layout_width="128dp"
+        android:layout_height="48dp"
+        android:text="Submit"
+        android:id="@+id/submit"
+        android:layout_marginRight="41dp"
+        android:layout_marginEnd="41dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="63dp" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Canteen"
+        android:id="@+id/canteen"
+        android:layout_below="@+id/header"
+        android:layout_alignLeft="@+id/complaint"
+        android:layout_alignStart="@+id/complaint"
+        android:layout_marginTop="50dp"
+        android:checked="false" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Laundry"
+        android:id="@+id/laundry"
+        android:layout_below="@+id/canteen"
+        android:layout_alignLeft="@+id/canteen"
+        android:layout_alignStart="@+id/canteen"
+        android:checked="false" />
+</RelativeLayout>

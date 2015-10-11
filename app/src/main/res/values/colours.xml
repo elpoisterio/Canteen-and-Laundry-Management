@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#03a9f4</color>
+    <color name="colorSecondary">#0288d1</color>
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="colorNavigation">#383838</color>
+    <color name="grey">#8d8d8d</color>
+    <color name="lightgrey">#bdbdbd</color>
+    <color name="tabUnSelected">#99dbd4</color>
+    <color name="pending">#FFA000</color>
+    <color name="confirmed">#689F38</color>
+    <color name="meeting_bg">#383838</color>
+    <color name="white">#ffffff</color>
+    <color name="red">#E20F00</color>
+    <color name="green">#8BC34A</color>
+    <color name="purple"> #9c27b0</color>
+    <color name="deep_purple"> #673ab7</color>
+    <color name="black">#000000</color>
+    <color name="blue_400">#26c6da</color>
+    <color name="cyan"> #00bcd4</color>
+
+</resources>
