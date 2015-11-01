@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import com.gc.materialdesign.views.ButtonRectangle;
 
@@ -13,6 +14,7 @@ import com.gc.materialdesign.views.ButtonRectangle;
  */
 public class StudentSignUp extends Activity implements View.OnClickListener {
     ButtonRectangle signIn;
+    EditText name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,8 @@ public class StudentSignUp extends Activity implements View.OnClickListener {
 
     public void initView(){
         signIn = (ButtonRectangle) findViewById(R.id.sign_in);
+        name = (EditText) findViewById(R.id.name);
+        name.getText();
         // sets click lstener on button
         signIn.setOnClickListener(this);
     }
