@@ -1,11 +1,13 @@
-package io.rishabh.canteenmanagement;
+package io.rishabh.canteenmanagement.adapters;
 
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.view.PagerAdapter;
+
+import io.rishabh.canteenmanagement.fragments.Laundry;
+import io.rishabh.canteenmanagement.fragments.Canteen;
 
 /**
  * Created by rishabh on 11/10/15.

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -19,30 +19,92 @@
     </LinearLayout>
 
 
-    <io.rishabh.canteenmanagement.SlidingTabLayout
-        android:id="@+id/hometabs"
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/amul"
+        android:layout_width="@dimen/icon_width"
+        android:layout_height="@dimen/icon_height"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/header"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="58dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="96dp"
+        android:background="@mipmap/cutlery"
+         />
+
+    <TextView
+        android:id="@+id/amul_text"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/colorSecondary">
+        android:layout_alignEnd="@+id/amul"
+        android:layout_alignRight="@+id/amul"
+        android:layout_below="@+id/amul"
+        android:text="Amul"
+        android:textSize="30sp" />
 
-    </io.rishabh.canteenmanagement.SlidingTabLayout>
+    <ImageView
+        android:id="@+id/staionary"
+        android:layout_width="@dimen/icon_width"
+        android:layout_height="@dimen/icon_height"
+        android:layout_gravity="center_horizontal"
+        android:background="@mipmap/books"
+        android:layout_above="@+id/stationary_text"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="65dp"
+        android:layout_marginEnd="65dp" />
 
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewpager"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/stationary_text"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Stationary"
+        android:textSize="30sp"
+        android:layout_above="@+id/juice"
+        android:layout_alignLeft="@+id/staionary"
+        android:layout_alignStart="@+id/staionary" />
 
-        />
+    <ImageView
+        android:id="@+id/juice"
+        android:layout_width="@dimen/icon_width"
+        android:layout_height="@dimen/icon_height"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="58dp"
+        android:background="@mipmap/softdrink"
+        android:layout_below="@+id/amul_text"
+        android:layout_alignRight="@+id/amul_text"
+        android:layout_alignEnd="@+id/amul_text" />
 
-    <FrameLayout
-        android:id="@+id/container_body"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/juice_text"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="?actionBarSize" />
+        android:layout_alignEnd="@+id/juice"
+        android:layout_alignRight="@+id/juice"
+        android:layout_below="@+id/juice"
+        android:text="Juice"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/laundry"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@mipmap/hanger"
+        android:layout_alignTop="@+id/juice"
+        android:layout_alignLeft="@+id/stationary_text"
+        android:layout_alignStart="@+id/stationary_text" />
+
+    <TextView
+        android:id="@+id/laundry_text"
+        android:layout_width="@dimen/icon_width"
+        android:layout_height="@dimen/icon_height"
+        android:text="Laundry"
+        android:textSize="25sp"
+        android:layout_below="@+id/juice"
+        android:layout_alignLeft="@+id/laundry"
+        android:layout_alignStart="@+id/laundry" />
 
 
-
-
-
-</LinearLayout>
+</RelativeLayout>

@@ -30,8 +30,6 @@
         android:id="@+id/sign_up"
         android:textColor="@color/white"
         android:background="@color/colorSecondary"
-        android:textSize="20sp"
-
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
@@ -40,7 +38,6 @@
         android:layout_height="48dp"
         android:text="Explore"
         android:id="@+id/explore"
-        android:textSize="20sp"
         android:textColor="@color/white"
         android:background="@color/colorSecondary"
         android:layout_marginTop="20dp"

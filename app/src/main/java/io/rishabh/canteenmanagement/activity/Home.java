@@ -1,18 +1,18 @@
-package io.rishabh.canteenmanagement;
+package io.rishabh.canteenmanagement.activity;
 
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
+import io.rishabh.canteenmanagement.adapters.HomeViewPagerAdapter;
+import io.rishabh.canteenmanagement.R;
+import io.rishabh.canteenmanagement.utility.SlidingTabLayout;
+
 /**
  * Created by rishabh on 11/10/15.
  */
 public class Home extends AppCompatActivity {
-    private ViewPager viewPager;
-    private SlidingTabLayout slidingTabLayout ;
-    private int ntabs = 2;
-    private CharSequence titles[]= {"Canteen","Laundry"};
     Toolbar toolbar;
 
 
@@ -30,13 +30,7 @@ public class Home extends AppCompatActivity {
        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
-        viewPager = (ViewPager) findViewById(R.id.viewpager);
-        viewPager.setAdapter(new HomeViewPagerAdapter(getSupportFragmentManager(),titles, ntabs,Home.this));
-        slidingTabLayout = (SlidingTabLayout)findViewById(R.id.hometabs);
-        slidingTabLayout.setDistributeEvenly(true);
-        slidingTabLayout.setSelectedIndicatorColors(getResources().getColor(R.color.green));
 
-        slidingTabLayout.setViewPager(viewPager);
 
 
     }
