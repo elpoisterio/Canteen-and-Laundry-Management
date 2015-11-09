@@ -18,7 +18,7 @@ public class LaundryAdapter extends BaseAdapter {
     private LayoutInflater mInflater;
     ArrayList<String> itemsArrayList;
     Context context;
-
+//Adapter to hold the array in listview.
 
     public LaundryAdapter(Context context, ArrayList<String> itemsArrayList) {
         this.mInflater = LayoutInflater.from(context);

@@ -24,7 +24,7 @@ public class Complaint extends AppCompatActivity implements View.OnClickListener
     ButtonRectangle buttonSubmit;
     Toolbar toolbar;
     private Spinner typeSpinner, shopSpinner;
-    private String shopName[] = {"Select Shop", "Amul", "Stationary", "Juice-Shop", "Laundry","Food-Barn"};
+    private String shopName[] = {"Select Shop", "Amul", "Stationary", "Juice-Shop", "Laundry", "Food-Barn"};
     private RadioButton complain, request;
 
     @Override
@@ -32,12 +32,9 @@ public class Complaint extends AppCompatActivity implements View.OnClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_complaint);
         initView();
-
         spinnerShopAdapter();
-
-
     }
-
+//Views of class
     public void initView() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -49,7 +46,7 @@ public class Complaint extends AppCompatActivity implements View.OnClickListener
         buttonSubmit = (ButtonRectangle) findViewById(R.id.submit);
         buttonSubmit.setOnClickListener(this);
     }
-
+// Spinner to select shops
 
     public void spinnerShopAdapter() {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
@@ -58,6 +55,7 @@ public class Complaint extends AppCompatActivity implements View.OnClickListener
         shopSpinner.setAdapter(adapter);
         shopSpinner.setOnItemSelectedListener(this);
     }
+    //on click listener
 
     @Override
     public void onClick(View v) {
@@ -70,6 +68,7 @@ public class Complaint extends AppCompatActivity implements View.OnClickListener
 
         }
     }
+    //intent to move to home.
 
     private void moveToHome() {
         Intent intent = new Intent(this, Home.class);
@@ -92,7 +91,7 @@ public class Complaint extends AppCompatActivity implements View.OnClickListener
 
         Spinner spinner = (Spinner) parent;
         int id_spinner = spinner.getId();
-        switch (id_spinner){
+        switch (id_spinner) {
             case R.id.spinner_shop:
                 shopSpinner.setSelection(position);
                 String shop = (String) shopSpinner.getSelectedItem();
@@ -108,7 +107,7 @@ public class Complaint extends AppCompatActivity implements View.OnClickListener
 
 
     }
-
+//Radio buttons to check request or complain.
     public String onRadioButtonClicked(View view) {
         String check = "";
         // Is the button now checked?
@@ -118,7 +117,7 @@ public class Complaint extends AppCompatActivity implements View.OnClickListener
         switch (view.getId()) {
             case R.id.complain:
                 if (checked) {
-                    if(request.isChecked())
+                    if (request.isChecked())
                         request.setChecked(false);
                     check = "complain";
                     return check;
@@ -127,7 +126,7 @@ public class Complaint extends AppCompatActivity implements View.OnClickListener
                 break;
             case R.id.request:
                 if (checked) {
-                    if(complain.isChecked())
+                    if (complain.isChecked())
                         complain.setChecked(false);
                     check = "request";
                     return check;

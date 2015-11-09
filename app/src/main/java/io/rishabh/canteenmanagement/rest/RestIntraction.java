@@ -3,6 +3,7 @@ package io.rishabh.canteenmanagement.rest;
 /**
  * Created by rishabh on 25-05-2015.
  */
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -72,8 +73,7 @@ public class RestIntraction {
     /**
      * Overloaded Constructor to get rest api url
      *
-     * @param url
-     *            of the server
+     * @param url of the server
      */
     public RestIntraction(String url) {
         this.url = url;
@@ -86,10 +86,8 @@ public class RestIntraction {
     /**
      * To add parameters to REST Request
      *
-     * @param name
-     *            of the parameter
-     * @param value
-     *            of the parameter
+     * @param name  of the parameter
+     * @param value of the parameter
      */
     public void AddParam(String name, String value) {
         params.add(new BasicNameValuePair(name, value));
@@ -105,10 +103,8 @@ public class RestIntraction {
     /**
      * To add parameters to REST Request
      *
-     * @param name
-     *            of the parameter
-     * @param value
-     *            of the parameter
+     * @param name  of the parameter
+     * @param value of the parameter
      */
     public void AddParamArray(String name, ArrayList<String> arrayOfValues) {
         for (String value : arrayOfValues) {
@@ -129,8 +125,7 @@ public class RestIntraction {
     /**
      * To execute the REST Request
      *
-     * @param method
-     *            (GET or POST or PUT)
+     * @param method (GET or POST or PUT)
      * @throws Exception
      */
     public void Execute(int method) throws Exception {
@@ -200,7 +195,7 @@ public class RestIntraction {
      * @param request
      * @param url
      */
-    private void executeRequest(HttpUriRequest request, String url)throws Exception {
+    private void executeRequest(HttpUriRequest request, String url) throws Exception {
 
         HttpParams httpParameters = new BasicHttpParams();
         // Set the timeout in milliseconds until a connection is established.
@@ -254,11 +249,10 @@ public class RestIntraction {
     /**
      * To convert input stream to String
      *
-     * @param is
-     *            Input Stream
+     * @param is Input Stream
      * @return string
      */
-    private static String convertStreamToString(InputStream is)throws Exception  {
+    private static String convertStreamToString(InputStream is) throws Exception {
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(is));
         StringBuilder sb = new StringBuilder();

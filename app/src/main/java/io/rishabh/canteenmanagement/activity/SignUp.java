@@ -19,7 +19,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
         setContentView(R.layout.activity_sign_up);
         initView();
     }
-
+//Views of class
    public void initView(){
        button_shopkeeper = (ButtonRectangle) findViewById(R.id.button_shopkeeper);
        button_faculty = (ButtonRectangle) findViewById(R.id.button_faculty);
@@ -38,7 +38,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
         }
 
     }
-
+//Move to next screen
     private void moveToSignUpForm() {
         Intent intent = new Intent(SignUp.this,StudentSignUp.class);
         startActivity(intent);

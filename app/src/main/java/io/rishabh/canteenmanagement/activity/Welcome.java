@@ -21,6 +21,7 @@ public class Welcome extends Activity implements View.OnClickListener {
         setContentView(R.layout.welcome);
         initView();
     }
+    //Defining views of class
     public void initView(){
         signUp = (ButtonRectangle) findViewById(R.id.sign_up);
         explore = (ButtonRectangle) findViewById(R.id.explore);
@@ -28,7 +29,7 @@ public class Welcome extends Activity implements View.OnClickListener {
         explore.setOnClickListener(this);
 
     }
-
+//Onclick Listener
     @Override
     public void onClick(View v) {
         int id = v.getId();
@@ -41,6 +42,7 @@ public class Welcome extends Activity implements View.OnClickListener {
                 break;
         }
     }
+    //Intent to move to next screen
 
     private void moveToHome() {
         Intent intent = new Intent(Welcome.this,Home.class);
