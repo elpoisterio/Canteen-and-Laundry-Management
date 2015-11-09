@@ -20,19 +20,18 @@
 
 
     <EditText
-        android:layout_width="fill_parent"
+        android:layout_width="320dp"
         android:layout_height="100dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/complaint"
         android:hint="  Enter your Complain"
         android:ems="10"
-        android:layout_marginLeft="40dp"
         android:background="@drawable/rect"
-        android:layout_centerVertical="true"
+        android:cursorVisible="true"
         android:layout_alignParentLeft="true"
+        android:layout_below="@+id/spinner_shop"
         android:layout_alignParentStart="true"
-        android:cursorVisible="false"
-        />
+        android:layout_margin="20dp"/>
 
     <com.gc.materialdesign.views.ButtonRectangle
         android:layout_width="128dp"
@@ -46,24 +45,38 @@
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="63dp" />
 
-    <RadioButton
-        android:layout_width="wrap_content"
+
+
+    <Spinner
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:text="Canteen"
-        android:id="@+id/canteen"
-        android:layout_below="@+id/header"
-        android:layout_alignLeft="@+id/complaint"
-        android:layout_alignStart="@+id/complaint"
-        android:layout_marginTop="50dp"
+        android:id="@+id/spinner_shop"
+        android:layout_below="@+id/request"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <RadioButton
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Request"
+        android:id="@+id/request"
+        android:layout_below="@+id/complain"
+        android:layout_alignLeft="@+id/complain"
+        android:layout_alignStart="@+id/complain"
+        android:onClick="onRadioButtonClicked"
         android:checked="false" />
 
     <RadioButton
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:text="Laundry"
-        android:id="@+id/laundry"
-        android:layout_below="@+id/canteen"
-        android:layout_alignLeft="@+id/canteen"
-        android:layout_alignStart="@+id/canteen"
-        android:checked="false" />
+        android:text="Complain"
+        android:id="@+id/complain"
+        android:layout_below="@+id/header"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:onClick="onRadioButtonClicked"
+        android:checked="true" />
+
+
 </RelativeLayout>

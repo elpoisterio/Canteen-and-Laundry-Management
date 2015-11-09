@@ -49,7 +49,7 @@ public class Welcome extends Activity implements View.OnClickListener {
     }
 
     private void moveToSignUp() {
-        Intent intent = new Intent(Welcome.this,SignUp.class);
+        Intent intent = new Intent(Welcome.this,StudentSignUp.class);
         startActivity(intent);
         finish();
     }

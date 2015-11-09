@@ -26,7 +26,7 @@ public class StudentSignUp extends Activity implements View.OnClickListener {
 
     public void initView(){
         signIn = (ButtonRectangle) findViewById(R.id.sign_in);
-        name = (EditText) findViewById(R.id.name);
+        name = (EditText) findViewById(R.id.itemName);
         name.getText();
         // sets click lstener on button
         signIn.setOnClickListener(this);
@@ -45,7 +45,7 @@ public class StudentSignUp extends Activity implements View.OnClickListener {
     }
 
     private void moveToOtp() {
-        Intent intent = new Intent(StudentSignUp.this,Otp.class);
+        Intent intent = new Intent(StudentSignUp.this,Home.class);
         startActivity(intent);
         finish();
     }

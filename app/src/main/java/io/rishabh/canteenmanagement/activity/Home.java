@@ -1,19 +1,23 @@
 package io.rishabh.canteenmanagement.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
+
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import com.gc.materialdesign.views.ButtonFloat;
 
-import io.rishabh.canteenmanagement.adapters.HomeViewPagerAdapter;
+
 import io.rishabh.canteenmanagement.R;
-import io.rishabh.canteenmanagement.utility.SlidingTabLayout;
+
 
 /**
  * Created by rishabh on 11/10/15.
  */
-public class Home extends AppCompatActivity {
+public class Home extends AppCompatActivity implements View.OnClickListener {
     Toolbar toolbar;
+    ButtonFloat buttonComplaint;
 
 
     @Override
@@ -27,11 +31,29 @@ public class Home extends AppCompatActivity {
 
     private void initViews() {
 
-       toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        buttonComplaint = (ButtonFloat) findViewById(R.id.button_complaint);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
+        buttonComplaint.setOnClickListener(this);
+        buttonComplaint.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
 
 
+    }
 
+    @Override
+    public void onClick(View v) {
+        int id = v.getId();
+        switch (id) {
+            case R.id.button_complaint:
+                movetoComplaint();
+                break;
+        }
+    }
+
+    private void movetoComplaint() {
+        Intent intent = new Intent(this, Complaint.class);
+        startActivity(intent);
+        finish();
     }
 }
